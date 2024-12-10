@@ -3,19 +3,8 @@ C Solution for "Count Prefixes of a Given String" - Simple and Efficient
 
 The approach is straightforward, using the strncmp function from the C standard library to compare each word with the prefix of the target string s.
 
-Code:
-#include <string.h>
 
-int countPrefixes(char** words, int wordsSize, char* s) {
-    int count = 0;
-    for (int i = 0; i < wordsSize; i++) {
-        if (strncmp(words[i], s, strlen(words[i])) == 0) {
-            count++;
-        }
-    }
-    return count;
-}
-How It Works:
+How the Code works:
 
 Initialize count: Keeps track of valid prefixes.
 Loop Through Each Word:
